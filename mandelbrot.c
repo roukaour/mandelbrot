@@ -2,7 +2,7 @@
  * mandelbrot - generates an image of the Mandelbrot set or certain related
  * fractals.
  *
- * Copyright (C) 2011-2014 Remy Oukaour
+ * Copyright (C) 2011-2014 Remy Oukaour <http://www.remyoukaour.com>.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -108,7 +108,8 @@
 	"\tWritten by Remy Oukaour <remy.oukaour@gmail.com>.\n"\
 	"\n"\
 	"COPYRIGHT\n"\
-	"\tCopyright (C) 2011-2014 Remy Oukaour. MIT License.\n"\
+	"\tCopyright (C) 2011-2014 Remy Oukaour <http://www.remyoukaour.com>.\n"\
+	"\tMIT License.\n"\
 	"\tThis is free software: you are free to change and redistribute it.\n"\
 	"\tThere is NO WARRANTY, to the extent permitted by law.\n")
 
