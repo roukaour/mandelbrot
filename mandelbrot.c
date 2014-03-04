@@ -255,7 +255,7 @@ void mandelbrot(MANDELBROT *man) {
 			zr = cr;
 			zi = ci;
 			n = 0;
-			if (set == SET_MANDELBROT) {
+			if (set == SET_MANDELBROT && !j) {
 				// cardioid test
 				qt1 = zr - 0.25;
 				qt2 = zi * zi;
