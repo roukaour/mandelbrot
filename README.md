@@ -2,7 +2,9 @@
 
 ![A sample image of the Mandelbrot fractal](example.png)
 
-*An image generated with `./mandelbrot -c -0.743643135/0.131825963 -d 0.000014628/0.000014628 -n -i 2048 -p 02d/f80/ff0/f00/fff -w 2048` and scaled to 512x512 to simulate 4x antialiasing.*
+*An image generated with `./mandelbrot -c -0.743643135/0.131825963 -d
+0.000014628/0.000014628 -n -i 2048 -p 02d/f80/ff0/f00/fff -w 2048` and scaled
+to 512x512 to simulate 4x antialiasing.*
 
 `mandelbrot` generates PPM images of specified regions of a fractal. It can
 generate the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) (and
