@@ -5,8 +5,7 @@
 *An image generated with:*
 
 ```
-./mandelbrot -c -0.743643135/0.131825963 -d
-0.000014628/0.000014628 -n -i 2048 -p 02d/f80/ff0/f00/fff -w 2048
+./mandelbrot -c -0.743643135/0.131825963 -d 0.000014628/0.000014628 -n -i 2048 -p 02d/f80/ff0/f00/fff -w 2048
 ```
 
 *and scaled to 512x512 to simulate 4x antialiasing.*
