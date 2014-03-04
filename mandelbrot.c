@@ -25,6 +25,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <getopt.h>
 #include <string.h>
 #include <errno.h>
@@ -36,7 +37,7 @@
 #define UNUSED(x) UNUSED_ ## x
 #endif
 
-#define eprintf(args...) fprintf(stderr, args)
+#define eprintf(...) fprintf(stderr, __VA_ARGS__)
 #define nfree(p) do { free(p); p = NULL; } while (0)
 
 #define FALSE 0
