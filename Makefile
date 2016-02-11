@@ -1,7 +1,7 @@
 TARGET = mandelbrot
 
 CC = gcc
-CFLAGS = -O3 -Wall -Wextra
+CFLAGS = -std=c11 -Wall -Wextra -pedantic -O3
 LDFLAGS = -lm
 RM = rm -f
 

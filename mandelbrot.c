@@ -305,8 +305,6 @@ void mandelbrot(MANDELBROT *man) {
 }
 
 int main(int argc, char *argv[]) {
-	extern char *optarg;
-	extern int optind, optopt, opterr;
 	int opt, long_optind, i, encs = 0;
 	COLOR **ecs = NULL;
 	char ec_d[] = "000", cs_d[] = "000/fff";
