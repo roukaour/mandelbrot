@@ -180,6 +180,7 @@ int main(int argc, char *argv[]) {
 		{"help", no_argument, NULL, 'h'},
 		{NULL, no_argument, NULL, 0}
 	};
+    fp = stdout;
 	MANDELBROT man = {
 		640, // pw
 		0.0, 0.0, // cx, cy
