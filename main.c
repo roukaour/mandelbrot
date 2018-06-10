@@ -99,11 +99,11 @@
 
 FILE* fp;
 
-void create_file_header(int pw, int ph) {
+void create_file_header(int pw, int ph, void* e) {
 	fprintf(fp, "P6\n%d %d\n255\n", pw, ph);
 }
 
-void append_colors_to_file(int r, int g, int b) {
+void append_colors_to_file(int r, int g, int b, void* e) {
     fprintf(fp, "%c%c%c", r, g, b);
 }
 
@@ -271,7 +271,7 @@ int main(int argc, char *argv[]) {
 	}
     int total;
 	MAND_COLOR **palette = make_palette(man.cs, man.ncs, &total, man.ec);
-	mandelbrot(&man, palette, total, create_file_header, append_colors_to_file);
+	mandelbrot(&man, palette, total, create_file_header,NULL, append_colors_to_file, NULL);
 	for (i = 0; i <= total; i++) {
 		nfree(palette[i]);
 	}

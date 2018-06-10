@@ -91,9 +91,9 @@ int smooth_color(int total, int n, int imax, long double zr, long double zi, lon
 	return c;
 }
 
-void mandelbrot(MANDELBROT *man, MAND_COLOR** palette, int total, void (*dimensions_found)(int pw, int ph), void (*color_found)(int r, int g, int b)) {
+void mandelbrot(MANDELBROT *man, MAND_COLOR** palette, int total, void (*dimensions_found)(int pw, int ph, void* e), void* extra_dim, void (*color_found)(int r, int g, int b, void* e), void* extra_color) {
 	int pw = man->pw, ph = man->h * man->pw / man->w;
-    dimensions_found(pw, ph);
+    dimensions_found(pw, ph, extra_dim);
 	int set = man->set, j = man->j;
 	int x, y, n, c, p;
 	long double r2 = man->r * man->r, logr = log(man->r);
@@ -149,7 +149,7 @@ void mandelbrot(MANDELBROT *man, MAND_COLOR** palette, int total, void (*dimensi
 					break;
 			}
 			c = color(total, n, man->imax, zr, zi, logr);
-            color_found(palette[c]->r, palette[c]->g, palette[c]->b);
+            color_found(palette[c]->r, palette[c]->g, palette[c]->b, extra_color);
 		}
 	}
 }
