@@ -46,6 +46,12 @@ typedef struct {
 	int ncs;
 	int nic;
 } MANDELBROT;
+#ifdef __cplusplus
+extern "C" {
+#endif    
+    MAND_COLOR **make_palette(MAND_COLOR **cs, int ncs, int *total, MAND_COLOR *ec);
+    void mandelbrot(MANDELBROT *man, MAND_COLOR** palette, int total, void (*dimensions_found)(int pw, int ph, void* e), void* dim_arg, void (*color_found)(int r, int g, int b, void* e), void* color_arg);
 
-MAND_COLOR **make_palette(MAND_COLOR **cs, int ncs, int *total, MAND_COLOR *ec);
-void mandelbrot(MANDELBROT *man, MAND_COLOR** palette, int total, void (*dimensions_found)(int pw, int ph, void* e), void* dim_arg, void (*color_found)(int r, int g, int b, void* e), void* color_arg);
+#ifdef __cplusplus
+}  // End of extern "C" block
+#endif
