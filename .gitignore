@@ -1,5 +1,7 @@
 mandelbrot
 mandelbrot.exe
+*.o
+*.gch
 *.ppm
 *.png
 !example.png

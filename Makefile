@@ -9,8 +9,14 @@ RM = rm -f
 
 all: $(TARGET)
 
-$(TARGET): mandelbrot.c
-	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
+$(TARGET).o: mandelbrot.c mandelbrot.h
+	$(CC) $(CFLAGS) -c $^
+
+main.o: main.c mandelbrot.h
+	$(CC) $(CFLAGS) -c $^
+
+$(TARGET): main.o $(TARGET).o
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
 clean:
-	$(RM) $(TARGET) $(TARGET).exe
+	$(RM) $(TARGET) $(TARGET).exe *.o
